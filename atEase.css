@@ -138,6 +138,10 @@ a {
   flex-grow: 1;
 }
 
+.profile img {
+  border-radius: 50%;
+}
+
 .row {
   display: flex;
   justify-content: space-around;
