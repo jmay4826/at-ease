@@ -3,22 +3,24 @@ body {
   font-family: Quicksand;
   font-size: 16pt;
   margin: 0;
-}
-
-section {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-nav,
-header {
   text-align: center;
-  width: 100%;
-  /* box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4); */
 }
 
-header > img {
+nav {
+  width: 100%;
+}
+
+header {
+  padding-top: 8vh;
+}
+
+hr {
+  border-style: dotted;
+  border-color: #7f7f7f;
+  border-width: 1px 0 0 0;
+}
+
+.logo {
   max-width: 80%;
   max-height: 40vh;
   margin: 20px auto;
@@ -47,14 +49,7 @@ ul {
   background-color: white;
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.6);
   padding: 8px 0px;
-}
-
-.sticky > img {
-  width: 25%;
-}
-
-.sticky > .more {
-  display: none;
+  margin-bottom: 100%;
 }
 
 .button {
@@ -76,21 +71,17 @@ ul {
 
 h1 {
   font-size: 2em;
-  padding: 15px;
-  padding-top: 30px;
   font-weight: 400;
 }
 
 fieldset {
   border: 1px solid #2788e2;
-  text-align: center;
   max-width: 75%;
-  margin: 0 auto;
+  margin: 50px auto;
 }
 
 fieldset legend {
   font-family: Quicksand;
-  text-align: center;
   text-transform: lowercase;
   border: none;
   color: #7f7f7f;
@@ -106,12 +97,21 @@ em {
   text-decoration: underline;
 }
 
-.anchor {
-  padding-top: 20px;
+.anchor::before {
+  margin-top: -8vh;
+  height: 8vh;
+  display: block;
+  content: "";
 }
 
-.centered {
-  text-align: center;
+.space {
+  width: 33%;
+}
+
+.content {
+  margin: auto;
+  /* text-align: center; */
+  max-width: 80%;
 }
 
 #therapists img {
@@ -150,6 +150,9 @@ a {
 }
 
 @media screen and (max-width: 600px) {
+  header {
+    padding-top: 10vh;
+  }
   fieldset {
     width: 90%;
     max-width: 100%;
@@ -165,5 +168,9 @@ a {
 
   .profile {
     flex-basis: 100%;
+  }
+
+  .content {
+    max-width: 100%;
   }
 }
