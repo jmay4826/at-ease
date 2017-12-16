@@ -30,7 +30,7 @@ nav ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 5px;
+  padding: 10px;
   list-style: none;
   margin: 0;
 }
@@ -133,7 +133,8 @@ a {
   font-size: 0.75em;
 }
 
-.profile {
+.profile,
+.info {
   flex-basis: 0;
   flex-grow: 1;
 }
