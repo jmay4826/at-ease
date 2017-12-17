@@ -135,7 +135,7 @@ em {
   background-image: url("img/1.jpg");
   margin: 10px auto;
   background-position: 50%;
-  width: 100%;
+  /* width: 100%; */
   background-size: contain;
   background-repeat: no-repeat;
   transition: 300ms all ease-out;
