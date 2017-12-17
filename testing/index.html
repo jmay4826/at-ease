@@ -17,7 +17,11 @@
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="atEase.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <script>
+    function changeImage(id) {
+      document.getElementById('featured').style.backgroundImage = "url('img/" + id + ".jpg')";
+    }
+  </script>
 </head>
 
 <body>
@@ -173,22 +177,27 @@
       <h1>Our Space</h1>
       <p>Photos coming soon.</p>
       <div class="row">
-        <img class="space" src="img/IMG_0008.jpg" />
-        <img class="space" src="img/IMG_0009.jpg" />
-        <img class="space" src="img/IMG_0010.jpg" />
-        <img class="space" src="img/IMG_0011.jpg" />
-        <img class="space" src="img/IMG_0012.jpg" />
-        <img class="space" src="img/IMG_0013.jpg" />
-        <img class="space" src="img/IMG_0014.jpg" />
-        <img class="space" src="img/IMG_0015.jpg" />
-        <img class="space" src="img/IMG_0016.jpg" />
-        <img class="space" src="img/IMG_0017.jpg" />
-        <img class="space" src="img/IMG_0018.jpg" />
-        <img class="space" src="img/IMG_0019.jpg" />
-        <img class="space" src="img/IMG_0020.jpg" />
-        <img class="space" src="img/IMG_0021.jpg" />
-        <img class="space" src="img/IMG_0022.jpg" />
-        <img class="space" src="img/IMG_0023.jpg" />
+        <div class="featured" id="featured">
+          <img id="featured-img" src="img/1.jpg" />
+        </div>
+        <div class="gallery">
+          <img onClick="javascript:changeImage(1)" class="space" src="img/1.jpg" />
+          <img onClick="javascript:changeImage(2)" class="space" src="img/2.jpg" />
+          <img onClick="javascript:changeImage(3)" class="space" src="img/3.jpg" />
+          <img onClick="javascript:changeImage(4)" class="space" src="img/4.jpg" />
+          <img onClick="javascript:changeImage(5)" class="space" src="img/5.jpg" />
+          <img onClick="javascript:changeImage(6)" class="space" src="img/6.jpg" />
+          <!-- <img class="space" src="img/IMG_0014.jpg" />
+          <img class="space" src="img/IMG_0015.jpg" />
+          <img class="space" src="img/IMG_0016.jpg" />
+          <img class="space" src="img/IMG_0017.jpg" />
+          <img class="space" src="img/IMG_0018.jpg" />
+          <img class="space" src="img/IMG_0019.jpg" />
+          <img class="space" src="img/IMG_0020.jpg" />
+          <img class="space" src="img/IMG_0021.jpg" />
+          <img class="space" src="img/IMG_0022.jpg" />
+          <img class="space" src="img/IMG_0023.jpg" /> -->
+        </div>
       </div>
     </div>
   </div>
