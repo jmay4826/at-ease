@@ -214,6 +214,23 @@ a {
   border: 1px solid #2788e2;
 }
 
+#modal {
+  background: white;
+  transition: opacity 1s;
+  opacity: 0;
+}
+#modal.open {
+  /* position: absolute; */
+  height: 100vh;
+  width: 100%;
+  opacity: 100%;
+}
+
+#modal.closed {
+  /* visibility: hidden; */
+  /* position: absolute; */
+}
+
 @media screen and (max-width: 600px) {
   header {
     padding-top: 12vh;
