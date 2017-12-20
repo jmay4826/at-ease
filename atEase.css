@@ -148,10 +148,11 @@ em {
 .gallery {
   margin: 0 auto;
   width: 80%;
-  max-height: 200px;
+  max-height: 250px;
   white-space: nowrap;
   position: relative;
-  overflow: scroll;
+  overflow-y: hidden;
+  overflow-x: auto;
 }
 
 .content {
