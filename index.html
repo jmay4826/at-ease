@@ -17,29 +17,18 @@
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="atEase.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script>
-    function toggleMore(id) {
-      let profile = document.getElementById(id + '-full');
-      profile.classList.toggle('shown');
-      let toggle = document.getElementById(id + '-toggle');
-      toggle.innerHTML = toggle.innerHTML === "Show more..." ? "Show less..." : "Show more..."
-
-
-    }
-    function changeImage(id) {
-      document.getElementById('featured').style.backgroundImage = "url('img/" + id + ".jpg')";
-      document.getElementsByClassName('active')[0].classList.remove('active');
-      document.getElementById(id).classList.add('active');
-    }
-
-    // function scrollImages(direction) {
-    //   let gallery = document.getElementById('gallery');
-    //   let current = +gallery.style.left.substring(0, gallery.style.left.length - 2);
-    //   if (direction === "left" && current > 0) {
-
-    //   }
-    //   gallery.style.left = direction === 'left' ? (current - 20) + "vw" : (current + 20) + "vw";
-    // }
+  <meta name="description" content="At Ease Therapeutic Massage is a locally owned and operated massage therapy office offering personalized massage sessions using advanced techniques. Gift certificates are also available!"
+  />
+  <script> function toggleMore(id) {
+      let profile = document.getElementById(id + '-full'); profile.classList.toggle('shown'); let
+        toggle = document.getElementById(id + '-toggle'); toggle.innerHTML = toggle.innerHTML === "Show more..." ? "Show less..."
+          : "Show more..."
+    } function changeImage(id) {
+      document.getElementById('featured').style.backgroundImage = "url('img/" +
+        id + ".jpg')"; document.getElementsByClassName('active')[0].classList.remove('active'); document.getElementById(id).classList.add('active');
+    } // function scrollImages(direction) { // let gallery = document.getElementById('gallery'); // let current = +gallery.style.left.substring(0,
+    gallery.style.left.length - 2); // if (direction === "left" && current > 0) { // } // gallery.style.left = direction ===
+    'left' ? (current - 20) + "vw" : (current + 20) + "vw"; // }
   </script>
 </head>
 
