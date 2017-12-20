@@ -17,114 +17,124 @@
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="atEase.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    function toggleMore(id) {
+      let profile = document.getElementById(id + '-full');
+      profile.classList.toggle('shown');
+      let toggle = document.getElementById(id + '-toggle');
+      toggle.innerHTML = toggle.innerHTML === "Show more..." ? "Show less..." : "Show more..."
 
+
+    }
+    function changeImage(id) {
+      document.getElementById('featured').style.backgroundImage = "url('img/" + id + ".jpg')";
+      document.getElementsByClassName('active')[0].classList.remove('active');
+      document.getElementById(id).classList.add('active');
+    }
+
+    // function scrollImages(direction) {
+    //   let gallery = document.getElementById('gallery');
+    //   let current = +gallery.style.left.substring(0, gallery.style.left.length - 2);
+    //   if (direction === "left" && current > 0) {
+
+    //   }
+    //   gallery.style.left = direction === 'left' ? (current - 20) + "vw" : (current + 20) + "vw";
+    // }
+  </script>
 </head>
 
 <body>
-  <main style="text-align: center">
-    <h1>Coming soon</h1>
-  </main>
-  <!--
-  <section>
-    <header id="header">
-      <img src="logo.png" alt="At Ease Therapeutic Massage">
-    </header>
-    <div class="container centered">
+  <nav id="nav" class="sticky">
+    <ul>
+      <li>
+        <a href="#top">
+          <i class="fa fa-home"></i>
+        </a>
+      </li>
+      <li>
+        <a href="#services">Our Services</a>
+      </li>
+      <li>
+        <a href="#therapists">Our Therapists</a>
+      </li>
+      <li>
+        <a href="#space">Our Space</a>
+      </li>
+    </ul>
+  </nav>
+  <header id="top">
+    <img class="logo" src="logo.png" alt="At Ease Therapeutic Massage">
+  </header>
+  <div class="container centered">
+    <fieldset>
+      <legend> Let the healing begin</legend>
+      <p>
+        <a href="https://www.google.com/maps/dir/?api=1&destination_place_id=ChIJCXTcyRnh84gRNDM8fxhJsso&destination=344+Corder+Rd+Warner+Robins+GA+31088">
+          <i class="fa fa-map-marker"></i>
+          <br /> 344 Corder Rd.
+          <br /> Warner Robins, GA 31088
+        </a>
+      </p>
+
+      <a class="button" href="vagaro.html">Gift Certificates</a>
+      <a class="button" href="#">Book Now (coming soon!)</a>
+
+      <p>
+        <i class="fa fa-phone"></i> 478-922-5200</p>
+      <p>
+        <a href="http://facebook.com/ateasetherapeuticmassage">
+          <i class="fa fa-facebook-official"></i> Like us on Facebook</a>
+      </p>
+    </fieldset>
+    <hr>
+  </div>
+  <div class="anchor" id="services">
+    <div class="content">
+      <h1>Our Services</h1>
+      <p>Our therapists use a wide variety of techniques to create personalized sessions for your needs.</p>
+      <p>We offer deep tissue massage, neuromuscular (trigger point) massage, relaxation massage, Swedish massage, pain relief,
+        and pregnancy massage.</p>
       <fieldset>
-        <legend> Let the healing begin</legend>
-        <p>
-          <a href="https://www.google.com/maps/dir/?api=1&destination_place_id=ChIJCXTcyRnh84gRNDM8fxhJsso&destination=344+Corder+Rd+Warner+Robins+GA+31088">
-            <i class="fa fa-map-marker"></i>
-            <br /> 344 Corder Rd.
-            <br /> Warner Robins, GA 31088
-          </a>
-        </p>
-
-        <a class="button" href="vagaro.html">Gift Certificates</a>
-        <a class="button" href="">Book Now (coming soon!)</a>
-
-        <p>
-          <i class="fa fa-phone"></i> 478-922-5200</p>
-        <p>
-          <a href="http://facebook.com/ateasetherapeuticmassage">
-            <i class="fa fa-facebook-official"></i> Like us on Facebook</a>
-        </p>
+        <legend>pricing</legend>
+        <ul>
+          <li>30 minutes..........$50</li>
+          <li>60 minutes..........$75</li>
+          <li>90 minutes..........$100</li>
+        </ul>
+        <p class="aside">Packages are also available, please call for details.</p>
       </fieldset>
     </div>
-    <nav id="nav">
-      <ul>
-        <li>
-          <a href="#header">
-            <i class="fa fa-home"></i>
-          </a>
-        </li>
-        <li>
-          <a href="#services">Our Services</a>
-        </li>
-        <li>
-          <a href="#therapists">Our Therapists</a>
-        </li>
-        <li>
-          <a href="#space">Our Space</a>
-        </li>
-      </ul>
-      <div class="more">
-        <a href="#nav">
-          <i id="moreIcon" class="fa fa-chevron-down small"></i>
-        </a>
-      </div>
-    </nav>
-  </section>
-
-  <div class="anchor" id="services">
-    <div class="centered">
-      <div>
-        <h1>Services & Pricing</h1>
-      </div>
-      <div>
-        <p>We offer deep tissue massage, neuromuscular (trigger point) massage, relaxation massage, Swedish massage, pain relief,
-          pregnancy massage.</p>
-      </div>
-      <div>
-        <p>
-          <ul>
-            <li>30 minutes..........$50</li>
-            <li>60 minutes..........$75</li>
-            <li>90 minutes..........$100</li>
-          </ul>
-          *Packages are also available
-        </p>
-      </div>
-    </div>
-    <hr>
-    <div class="centered">
+    <!-- <div class="content">
       <p class="aside">There is a $25 charge for same-day cancellations. No shows will be charged for the full time scheduled.</p>
-    </div>
+    </div> -->
   </div>
-  <div class="centered" id="whyMassage">
+  <!--
+  <div class="content" id="whyMassage">
     <div>
-      <div>
-        <h1>Why
-          <em>therapeutic</em> massage?</h1>
-      </div>
-      <div>
-        <h2>Muscle Relief</h2>
-        <p>Deep tissue massage can relieve muscular pain throughout the body, including the upper back, lower back, shoulders
-          and neck.</p>
-      </div>
-      <div>
-        <h2>Stress Relief</h2>
-        <p>Deep tissue massage can relieve muscular pain throughout the body, including the upper back, lower back, shoulders
-          and neck.</p>
-      </div>
-      <div>
-        <h2>Relaxation</h2>
-        <p>Deep tissue massage can relieve muscular pain throughout the body, including the upper back, lower back, shoulders
-          and neck.</p>
+      <h2>Why
+        <em>therapeutic</em> massage?</h2>
+      <div class="row">
+        <div class="info">
+          <h3>Muscle Relief</h3>
+          <p>Deep tissue massage can relieve muscular pain throughout the body, including the upper back, lower back, shoulders
+            and neck.</p>
+        </div>
+        <div class="info">
+          <h3>Stress Relief</h3>
+          <p>Deep tissue massage can relieve muscular pain throughout the body, including the upper back, lower back, shoulders
+            and neck.</p>
+        </div>
+        <div class="info">
+          <h3>Relaxation</h3>
+          <p>Deep tissue massage can relieve muscular pain throughout the body, including the upper back, lower back, shoulders
+            and neck.</p>
+        </div>
       </div>
     </div>
+  -->
+  <hr>
   </div>
-  <div class="anchor centered" id="therapists">
+  <div class="anchor content" id="therapists">
     <div>
       <div>
         <h1>Meet Our Therapists</h1>
@@ -132,44 +142,91 @@
           <div class="profile">
             <h2>Debbie Menard</h2>
             <img src="debbie.jpg">
-            <div class="small">
+            <div class="profile-text">
               <p>Debbie became a Licensed Physical Therapist Assistant in 1982 and continued her education in manual therapies
                 and massage. She founded At Ease Therapeutic Massage, Inc. in 1998 and continues to serve clients in Warner
                 Robins and Forsyth.</p>
             </div>
           </div>
-          <div class="profile">
+          <div id="jennifer-profile" class="profile">
             <h2>Jennifer May</h2>
             <img src="jennifer.jpg">
-            <div class="small">
-              <p>Jennifer joined the team in 2006 as the receptionist until she became Nationally Certified in Therapeutic Massage
+            <div class="profile-text">
+              <!-- <p>Jennifer joined the team in 2006 as the receptionist until she became Nationally Certified in Therapeutic Massage
                 and Bodywork in July 2007. As the business grew, Jennifer saw the opportunity to expand the office and completed
-                renovation of her space in 2016.</p>
+                renovation of her space in 2016.</p> -->
+              <p>
+                I'm blessed to have been a Licensed Massage Therapist for over a decade where I have dedicated myself to providing advanced
+                massage therapy sessions for clients, many of which I've come to value as family.
+              </p>
+              <div id="jennifer-full" class="profile-full">
+                <p>I design personalized sessions that meet your requirements while I feel my deep tissue and trigger point
+                  techniques continue to provide the most benefit.</p>
+                <p>
+                  When I'm not working, I am actively involved in our community as a certified foster parent and enjoy traveling with my family,
+                  where I've seen many states, countries, environments and cultures and have experienced massage techniques
+                  from them all.
+                </p>
+              </div>
+              <span id="jennifer-toggle" class="aside link" onClick="toggleMore('jennifer')">Show more...</span>
             </div>
+
           </div>
         </div>
         <div class="row">
           <div class="profile">
             <h2>Debi Masa</h2>
             <img src="debi.jpg">
-            <div class="small">
-              <p>Debbie joined the At Ease team in 2016.</p>
+            <div class="profile-text">
+              <p>Debi joined the At Ease team in 2016. </p>
             </div>
           </div>
-          <div class="profile">
+          <div id="stephen-profile" class="profile">
             <h2>Stephen List</h2>
             <img src="stephen.jpg">
-            <div class="small">
-              <p>Stephen joined the At Ease team in 2016.</p>
+            <div class="profile-text">
+              <p>
+                I am truly excited to be a team member at At Ease Therapeutic Massage, Inc. This opportunity allows me to return home to
+                Warner Robins and showcase my massage therapy abilities alongside the other excellent therapists. It is my
+                goal to see that the needs of every client are met with quality care and professionalism at all times."
+              </p>
+              <div id="stephen-full" class="profile-full">
+                <p>Stephen lives in Warner Robins, Georgia where he has done so since 1998. He retired from the U.S. Air Force
+                  in 2005 as a Master Sergeant specializing in communications. He spent the next seven years as a defense
+                  contractor continuing to serve our nation's military in the fields of video teleconferencing and logistics.
+                  In the spring of 2012 while still a defense contractor, he began the journey to become a licensed massage
+                  therapist pursuing a passion long overdue. Then, unexpectedly in early 2013, he left defense contracting
+                  all together and decided to focus solely on his massage therapy studies. By October of 2013, he was licensed
+                  and practicing in the state of Georgia.</p>
+
+                <p>In January of 2014, he accepted a position with Global Body Works where he practiced both chair and table
+                  massage therapy at the Children's hospitals in Atlanta working on the doctors, nurses, and parents of the
+                  child patients. In June of 2014, he transitioned to lead therapist at Eagles Landing Wellness and Chiropractic
+                  Center working in concert with the excellent chiropractic and wellness staff there. Then, in June of 2016,
+                  he accepted a position at 'At Ease' and remains there to this day. He is very skilled at deep tissue, neuromuscular
+                  therapy (NMT) and seated massage. He considers those to be his strongest modalities despite holding certifications
+                  in others as well.</p>
+
+                <p>Stephen was born in Columbus, Ohio, raised in Southbridge, Massachusetts and attended Ohio State University
+                  for several years before entering the military. During his 22 year military career that began in 1984,
+                  he lived in the United Kingdom, Japan, Germany and several other U.S. locations. He also served multiple
+                  tours in the Middle East during the wars in Iraq and Afghanistan. He is married to his wife Carole who
+                  hails from the United Kingdom and together they have two grown children, Nicole and Bryan. They also have
+                  three grandsons, Christian, Mason, and Chase. He enjoys playing golf, water color, and spending time with
+                  his family, who by-the-way, are all die-hard New England Patriots fans since the early 1970's. Go Patriots!</p>
+
+
+              </div>
+              <a href="#stephen-profile" id="stephen-toggle" class="aside link" onClick="toggleMore('stephen')">Show more...</a>
             </div>
           </div>
           <div class="profile">
             <h2>Ron Menard</h2>
             <img src="ron.jpg">
-            <div class="small">
+            <div class="profile-text">
               <p>Ron, Debbie's husband, joined the At Ease family in 2002 and continued to bring the healing effects of therapeutic
-                massage to his clients until his passing in 2017. Ron brought an energy and culture to At Ease that will
-                always be remembered. </p>
+                massage to his clients until his passing in 2017. Ron brought an unforgettable energy and culture to At Ease
+                will always be affectionately remembered as Dr. Pain. </p>
             </div>
           </div>
         </div>
@@ -178,28 +235,51 @@
   </div>
   <div class="anchor centered" id="space">
     <div>
-      <div>
-        <h1>Our Space</h1>
-        <p>Photos coming soon.</p>
+      <h1>Our Space</h1>
+      <div class="featured" id="featured">
       </div>
+      <p class="aside">Click to view larger</p>
+      <!-- <div class="gallery-container">
+        <div id="left" onClick="scrollImages('left')">
+          <i class="fa fa-angle-left"></i>
+        </div> -->
+      <div class="gallery" id="gallery">
+        <img id="1" onClick="changeImage('1')" class="active space" src="img/1.jpg" />
+        <img id="2" onClick="changeImage('2')" class="space" src="img/2.jpg" />
+        <img id="3" onClick="changeImage('3')" class="space" src="img/3.jpg" />
+
+        <img id="4" onClick="changeImage('4')" class="space" src="img/4.jpg" />
+        <img id="5" onClick="changeImage('5')" class="space" src="img/5.jpg" />
+        <img id="6" onClick="changeImage('6')" class="space" src="img/6.jpg" />
+      </div>
+      <!-- <div id="right" onClick="scrollImages('right')">
+          <i class="fa fa-angle-right"></i>
+        </div>
+      </div> -->
     </div>
   </div>
   </div>
+  </div>
+  <footer>
+    <hr>
+    <p class="aside">
+      At Ease Therapeutic Massage - 344 Corder Road, Warner Robins, GA 31088 - 478-922-5200
+    </p>
+  </footer>
 
 
   <script>
-    const navbar = document.getElementById('nav');
-    const sticky = navbar.offsetTop;
-    window.onscroll = function () {
+    // const navbar = document.getElementById('nav');
+    // const sticky = navbar.offsetTop;
+    // window.onscroll = function () {
 
-      if (window.pageYOffset >= sticky + 5) {
-        navbar.classList.add("sticky");
-      } else {
-        navbar.classList.remove("sticky");
-      }
-    }
+    //   if (window.pageYOffset >= sticky + 5) {
+    //     navbar.classList.add("sticky");
+    //   } else {
+    //     navbar.classList.remove("sticky");
+    //   }
+    // }
   </script>
--->
 </body>
 
 </html>
