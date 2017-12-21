@@ -215,6 +215,10 @@ a {
   border: 1px solid #2788e2;
 }
 
+.mobile {
+  display: none;
+}
+
 #modal {
   background: white;
   transition: opacity 1s;
@@ -257,5 +261,9 @@ a {
 
   .content {
     max-width: 100%;
+  }
+
+  .mobile {
+    display: block;
   }
 }
