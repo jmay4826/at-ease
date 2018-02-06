@@ -1,0 +1,269 @@
+html,
+body {
+  font-family: Quicksand;
+  font-size: 16pt;
+  margin: 0;
+  text-align: center;
+}
+
+nav {
+  width: 100%;
+}
+
+header {
+  padding-top: 8vh;
+}
+
+hr {
+  border-style: dotted;
+  border-color: #7f7f7f;
+  border-width: 1px 0 0 0;
+}
+
+.logo {
+  max-width: 80%;
+  max-height: 40vh;
+  margin: 20px auto;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  list-style: none;
+  margin: 0;
+}
+nav li {
+  margin: 0;
+  padding: 0 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+#right {
+  position: absolute;
+  left: 90vw;
+  z-index: 5;
+}
+#left {
+  height: 100%;
+  position: absolute;
+  left: 2vw;
+  z-index: 5;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6));
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  background-color: white;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.6);
+  padding: 8px 0px;
+  margin-bottom: 100%;
+}
+
+.button {
+  background-color: #2788e2;
+  padding: 8px;
+  border: 0px;
+  border-radius: 2px;
+  font-size: 0.8em;
+  color: white;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  margin: 5px;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: 400;
+  margin: 0.5em;
+}
+h3 {
+  margin: 0.5em;
+}
+
+fieldset {
+  border: 1px solid #2788e2;
+  max-width: 75%;
+  margin: 50px auto;
+}
+
+fieldset legend {
+  font-family: Quicksand;
+  text-transform: lowercase;
+  border: none;
+  color: #7f7f7f;
+  font-size: 2em;
+}
+
+p {
+  margin: 15px;
+}
+
+em {
+  font-style: normal;
+  text-decoration: underline;
+}
+
+.anchor::before {
+  margin-top: -8vh;
+  height: 8vh;
+  display: block;
+  content: "";
+}
+
+.space {
+  max-height: 120px;
+  margin: 0.5%;
+}
+
+.featured {
+  background-image: url("img/1.jpg");
+  margin: 10px auto;
+  background-position: 50%;
+  /* width: 100%; */
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: 300ms all ease-out;
+  height: 60vh;
+}
+
+.gallery-container {
+  overflow: hidden;
+}
+.gallery {
+  margin: 0 auto;
+  width: 80%;
+  max-height: 250px;
+  white-space: nowrap;
+  position: relative;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+.content {
+  margin: auto;
+  max-width: 80%;
+}
+
+#therapists img {
+  width: 50%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.profile-text {
+  font-size: 0.75em;
+  border: 0;
+  padding: 10px;
+}
+
+.profile-full {
+  transition: 500ms max-height ease-in-out;
+  max-height: 0px;
+  overflow: hidden;
+}
+
+.profile-full.shown {
+  max-height: 2000px;
+  overflow: auto;
+}
+
+.link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.aside {
+  font-size: 0.75em;
+}
+
+.profile,
+.info {
+  flex-basis: 0;
+  flex-grow: 0.5;
+}
+
+.profile img {
+  border-radius: 50%;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.active {
+  border: 1px solid #2788e2;
+}
+
+.mobile {
+  display: none;
+}
+
+#modal {
+  background: white;
+  transition: opacity 1s;
+  opacity: 0;
+}
+#modal.open {
+  /* position: absolute; */
+  height: 100vh;
+  width: 100%;
+  opacity: 100%;
+}
+
+#modal.closed {
+  /* visibility: hidden; */
+  /* position: absolute; */
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    padding-top: 12vh;
+  }
+  fieldset {
+    width: 90%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  fieldset legend {
+    font-size: 1.2em;
+  }
+  .container,
+  .gallery {
+    width: 100%;
+  }
+
+  .profile,
+  .info {
+    flex-basis: 100%;
+  }
+
+  .content {
+    max-width: 100%;
+  }
+
+  .mobile {
+    display: block;
+  }
+}
