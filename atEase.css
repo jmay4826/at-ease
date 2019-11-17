@@ -66,7 +66,7 @@ ul {
 }
 
 .button {
-  background-color: #2788e2;
+  background-color: #1c78d1;
   padding: 8px;
   border: 0px;
   border-radius: 2px;
@@ -97,7 +97,7 @@ h3 {
 }
 
 fieldset {
-  border: 1px solid #2788e2;
+  border: 1px solid #1c78d1;
   max-width: 75%;
   margin: 50px auto;
 }
@@ -127,8 +127,8 @@ em {
 }
 
 .space {
+  display: block;
   max-height: 120px;
-  margin: 0.5%;
 }
 
 .featured {
@@ -220,12 +220,32 @@ a {
   flex-wrap: wrap;
 }
 
-.active {
-  border: 1px solid #2788e2;
-}
-
 .mobile {
   display: none;
+}
+
+#gallery button {
+  display: inline-flex;
+  border: none;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+#gallery button:hover,
+button:focus {
+  background: none;
+}
+
+#gallery button:focus {
+  outline: 2px solid #1c78d1;
+  outline-offset: -2px;
 }
 
 #modal {
