@@ -160,8 +160,14 @@ em {
   max-width: 80%;
 }
 
-#therapists img {
-  width: 50%;
+#therapists .image {
+  width: 15vw;
+  height: 15vw;
+  background-position: center;
+  background-size: contain;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 a {
@@ -198,6 +204,9 @@ a {
 .info {
   flex-basis: 0;
   flex-grow: 0.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .profile img {
